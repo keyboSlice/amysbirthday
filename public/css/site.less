@@ -1,0 +1,240 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800,300);
+
+@col: rgba(0, 128, 128, 1);
+@light: rgba(255,255,255,1);
+@lobs: 'Lobster', cursive;
+@ossy: 'Oswald', sans-serif;
+@darkopaque: rgba(0,20,50,0.4); 
+@superdark: rgba(0,20,50,0.6); 
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @ossy;
+	text-transform: uppercase;
+}
+
+img {
+	max-width: 100%;
+}
+
+.full-size() {
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+.white-outline {
+	border: 3px solid white;
+	padding:5px;
+}
+
+.transition() {
+	transition: 1s all;
+}
+
+header {
+	background: @superdark !important;
+	border: none !important;
+	z-index:1001 !important;
+	padding-bottom:10px;
+	.transition();
+
+	& h1 {
+		color: #fff;
+		font-family: @lobs;
+		text-transform: none;
+	}
+}
+
+#map-container {
+	position:relative;
+	width:100%;
+	height: 0;
+	padding-bottom: 180%;
+	float:left;
+}
+
+#map {
+	.full-size();
+	left:0;
+}
+
+#map-overlay {
+	.full-size();
+	.transition();
+	background-repeat: repeat;
+	background-image: url(../img/texture2.png);
+	background-color: @superdark;
+	z-index: 1000;
+
+	& input {
+		width:98%;
+		color: @light;
+		margin: 5px 0;
+		background: none;
+		font-family: @lobs;
+		.white-outline();
+		.transition();
+
+		&:focus {
+			box-shadow: 0 0 10px @col;
+		}
+	}
+
+	& input[type="submit"]:hover {
+		background: @light;
+		color: @col;
+	}
+
+	.error {
+		width:95%;
+		padding:1%;
+		margin:auto;
+		border:3px solid rgba(255, 0, 0, 1);
+		text-align: center;
+		position: absolute;
+		top: 10%;
+
+		& p {
+			color: rgba(255, 0, 0, 1);
+			font-family: @ossy;
+			text-transform: uppercase;
+		}
+	}
+}
+s
+.btn {
+	.transition();
+}
+
+.btn.teal {
+	border-color: @col;
+	color: @col;
+	font-family: @ossy;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
+	text-transform: uppercase;
+
+	&:active {
+		background: @col;
+		color: #fff;
+	}
+}
+
+.btn.fff {
+	border-color: #fff;
+	color: #fff;
+	font-family: @ossy;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
+	text-transform: uppercase;
+
+	&:active {
+		background: #fff;
+		color: @col;
+	}
+}
+
+.overlay-buttons {
+	width: 50%;
+	position:absolute;
+	left:25%;
+	top: 60%;
+	text-align:center;
+}
+
+.overlay-button {
+	background:none;
+	border: 1px solid;
+}
+
+
+#login-form {
+	position:absolute;
+	top: 50%;
+	width:100%;
+}
+
+#overlay-owl {	
+	position:absolute;
+	top: 30%;
+
+	& .item {
+		width:98%;
+		margin: auto;
+		text-align:center;
+		.white-outline();	
+		.transition();
+
+		& p {
+			display: inline;
+			color: @light;
+			text-transform: uppercase;
+			font-family: @ossy;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 1.8em;
+		}
+	}
+}
+
+#main, #riddles {
+	background: @col;
+	padding: 20px 0;
+	color: white;
+	float: left;
+	width:100%;
+
+	& h1 {
+		.white-outline();
+		font-size:24px;
+		text-align: center;
+	}
+
+	& p {
+		color:#fff;
+		font-weight: 300;
+		font-family:'Open Sans', sans-serif;
+		font-size:14px;
+		line-height: 200%;
+		text-align:center;
+	}
+}
+
+#voucherform {
+	
+	float:left;
+	width:100%;
+	padding: 20px 0;
+
+	& input {
+		border: 2px solid #000;
+		font-family: @lobs;
+		padding: 5px;
+		background: none;
+	}
+	& h1 {
+		margin: 0 0 20px 0;
+		font-size:24px;
+		text-align: center;
+		border: 3px solid black;
+		padding:5px;
+	}
+}
+
+.panel-collapse {
+	padding: 16px;
+	font-family: @lobs !important;
+	& p {
+		color: #000 !important;
+		font-family: @lobs !important;
+	}
+	& input {
+		width: 100%;
+		margin:10px 0;
+		border: 2px solid #000;
+		font-family: @lobs;
+		padding: 5px;
+		background: none;
+		color: #000;
+	}
+}
